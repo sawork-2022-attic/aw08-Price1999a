@@ -22,7 +22,7 @@ Consider the advantage by doing so and write it down in your readme file.
 ## 作业报告
 
 同样的实际作业将被处理到aw05微服务那边对应的分支。
-~~链接待更新 TODO~~
+[aw05对应分支](https://github.com/sawork-2022/aw05-Price1999a/tree/aw08)
 
 在仓库中的代码主要探索了用SI进行代理的实现，对`http://localhost:8080/check/{var}` 的请求目前被转发到 `https://api.chucknorris.io/jokes/{var}` 上
 
