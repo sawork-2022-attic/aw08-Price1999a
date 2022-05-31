@@ -9,14 +9,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class HttpOutboundGateway {
-    @Bean
+//    @Bean
     public IntegrationFlow outGate() {
         return IntegrationFlows.from("sampleChannel")
                 .handle(Http.outboundGateway("https://api.chucknorris.io/jokes/random")
                         .httpMethod(HttpMethod.GET)
                         .expectedResponseType(Joke.class))
-                .<Joke, String>transform((j) -> j.getValue())
+                .<Joke, String>transform(Joke::getValue)
                 .handle(System.out::println)
                 .get();
     }
+
+
 }
